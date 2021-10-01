@@ -5,16 +5,16 @@
         async function doTraining(model){
             const history = 
                   await model.fit(xs, ys, 
-                        { epochs: 500,
-                          callbacks:{
-                              onEpochEnd: async(epoch, logs) =>{
-                                  console.log("Epoch:" 
-                                              + epoch 
-                                              + " Loss:" 
-                                              + logs.loss);
+                        {epochs: 500,
+                            callbacks:{
+                                onEpochEnd: async(epoch, logs) => {
+                                    console.log("Epoch:" 
+                                                + epoch 
+                                                + " Loss:" 
+                                                + logs.loss);
                                   
-                              }
-                          }
+                                }
+                            }
                         });
         }
         const model = tf.sequential();
