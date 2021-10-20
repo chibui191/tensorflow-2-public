@@ -80,7 +80,7 @@ async function predict() {
 	}
 	document.getElementById("prediction").innerText = predictionText;
 			
-    
+    // Clean up
     predictedClass.dispose();
     await tf.nextFrame();
   }
